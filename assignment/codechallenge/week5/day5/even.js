@@ -7,4 +7,3 @@ var even = function(number){
     }
 }
 
-console.log(even (6));

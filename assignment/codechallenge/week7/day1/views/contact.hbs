@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Contacts</title>
+</head>
+<body>
+    <div class="conatainer-fluid"></div>
+    <div class="row">
+        <div class="offset-md-4" "col-md-4" >
+            <h2>Contacts App</h2>
+            <hr>
+            <form action="/contact" method="POST">
+                 <label>
+                     Enter Contact Name: <input name="contactName" type="text" class="form-control">
+                 </label>
+
+                 <br>
+
+                 <label>
+                     Enter Contact Number: <input name="contactNum" type="text" class="form-control">
+                </label>
+                <br>
+                <button type="submit" class="btn-btn-info">Submit Details</button>
+          </form>
+           <br>
+          <table class="table-bordered">
+               <tr>
+                        <th >Contact Name</th>
+                        <th >Contact Number</th>
+              </tr>
+              <tbody>
+                    {{#each NAME}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{numb}}</td>
+                    </tr>
+                    {{/each}}
+              </tbody>
+          </table>
+        </div>
+    </div>
+</body>
+</html>

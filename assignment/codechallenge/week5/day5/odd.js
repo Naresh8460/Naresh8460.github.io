@@ -7,4 +7,3 @@ var odd = function(number){
     }
 }
 
-console.log(odd (6))

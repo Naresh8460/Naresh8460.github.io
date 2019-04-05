@@ -1,28 +1,31 @@
 'use strict';
 
-var updateData = function(data) {
+    var updateContent = function(data) {
     var section = document.getElementById("section");
-    section.innerHTML = " ";
+    section.innerHTML = "";
 
-    for (var i = 0; i< data.RelatedTopics.Length; i++){
-        var resultText = data.RelatedTopics[i].Result,
+    for (var i = 0; i < data.RelatedTopics.length; i++){
+        var resultText = data.RelatedTopics[i].Result;
         url = data.RelatedTopics[i].FirstURL;
 
         if(!resultText || !url) {
             continue;
         }
 
-        var link = document.createElement("a");
-        link.innerText = resultText;
-        link.href = url;
+        var a = document.createElement("a");
+        a.innerText = resultText;
+        a.href = url;
 
         var li = document.createElement ("li");
-        li.innerHTML = data.RelatedTopics[i].Result;
-        li.appendChild ( link );
+        li.appendChild ( a );
 
         var section = document.getElementById("section");
         section.appendChild ( li );
 
+
+        var p = document.createElement("p");
+        p.innerHTML = data.RelatedTopics[i].Result;
+        section.appendChild(p);
     }
 }
 
@@ -45,9 +48,9 @@ var loadContent = function() {
 
     //to fetch the data and use accordingly.
     request.onreadystatechange = function(data){
-        if (request.readystate == 4 && request.status==200){
-            var jasonData = JSON.parse(request.responseText)
-            updateData(jsondata);
+        if (request.readyState == 4 && request.status==200){
+            var jsonData = JSON.parse(request.responseText)
+            updateContent(jsonData);
         }
     };
 };
