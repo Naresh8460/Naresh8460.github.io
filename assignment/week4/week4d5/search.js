@@ -8,7 +8,7 @@
         var resultText = data.RelatedTopics[i].Result;
         url = data.RelatedTopics[i].FirstURL;
 
-        if(!resultText || !url) {
+        if(resultText || !url) {
             continue;
         }
 
