@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SignUp</title>
+</head>
+<body>
+  <div class="container-fluid">
+      <div class="">
+         <div class="column">
+             <div class="col-md-6 offset-md-3 form-group">
+                  <form action="/signup" method="POST">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="email" id="email"placeholder="Enter email">
+                        <br>
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                        <br>
+                        <label>Confirm Password</label>
+                        <input type="password" class="form-control" name="confirmPass" id="confirmPass" placeholder="Confirm Password">
+                        <br>
+                        <button type="submit" class="btn btn-secondary">SignUp</button>
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
+</body>
+</html>
