@@ -1,16 +1,18 @@
-var counter = 1;
+var gcounter = 1;
+var ocounter = 1;
+var ccounter = 1;
 
 //global counter
 $('#globalBtn').click(function(){
-    $('#global').text(counter)
-    counter = counter++;
+    $('#global').text(gcounter)
+    gcounter = gcounter+1;
 })
 
 //object counter
 var object = {
     addCountOne(){
-        $('#object').text(counter)
-        this.counter = counter++
+        $('#object').text(ocounter)
+        this.ocounter = ocounter++;
     }
 }
 $('#objectBtn').click (object.addCountOne);
@@ -18,12 +20,11 @@ $('#objectBtn').click (object.addCountOne);
 //closure counter
 function closureCount(){
     function addCount(){
-         $('#closure').text(counter)
-         counter = counter++;
+         $('#closure').text(ccounter)
+         ccounter = ccounter+1;
     }
     return addCount();
 }
-$('#closureBtn').click(function(){
-    alert("clicked")
-});
+$('#closureBtn').click(closureCount);
+
 
