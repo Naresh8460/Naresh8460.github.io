@@ -21,7 +21,8 @@ class Even extends React.Component{
     }
     
     check() {
-     if (this.state.num %2 === 0){
+        let num=(this.state.num)
+     if (num %2 === 0){
          this.setState({output : "even"});
      }else{
         this.setState({output : "odd"});;
@@ -33,7 +34,7 @@ class Even extends React.Component{
             <div>
                 <h2>{this.state.output}</h2>
                 <br/>
-                <input type = "text" onChange={this.inputChanged}/>
+                <input type = "number" onChange={this.inputChanged}/>
                 <br/>
                 <br/>
                 <button onClick={this.check}>click here</button>
