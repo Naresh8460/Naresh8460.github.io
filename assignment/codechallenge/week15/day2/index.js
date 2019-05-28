@@ -14,11 +14,11 @@ let myReducer = function (state, action) {
         let newState = state;
         newState.counter = newState.counter+1;
         return newState;
-    }else if(action.type == "DECREMENT"){
+    }if(action.type == "DECREMENT"){
         let newState = state;
         newState.counter = newState.counter-1;
         return newState;
-    }else(action.type == "RESET")
+    }if(action.type == "RESET")
        {let newState = state;
         newState.counter = 0;
         return newState;
