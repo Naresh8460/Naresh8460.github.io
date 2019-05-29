@@ -38,9 +38,9 @@ store.subscribe(function (){
 store.dispatch({
     type:"INCREMENT",
 })
-store.dispatch({
-    type:"INCREMENT",
-})
+// store.dispatch({
+//     type:"INCREMENT",
+// })
 store.dispatch({
     type:"DECREMENT",
 })
